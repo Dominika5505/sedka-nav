@@ -1,0 +1,171 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: lightcoral;
+  z-index: -2;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 7vh;
+  padding: 0 10px;
+  z-index: 2;
+}
+
+.logo i {
+  font-size: 1.5em;
+}
+
+.bgr-white {
+  background: #fff;
+}
+
+.hamburger-wrap {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 0 5px;
+}
+
+.hamburger {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  width: 25px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: top .3s ease .2s, background .3s ease .2s, -webkit-transform .2s ease;
+  transition: top .3s ease .2s, background .3s ease .2s, -webkit-transform .2s ease;
+  transition: transform .2s ease, top .3s ease .2s, background .3s ease .2s;
+  transition: transform .2s ease, top .3s ease .2s, background .3s ease .2s, -webkit-transform .2s ease;
+}
+
+.hamburger::after {
+  position: absolute;
+  top: 7px;
+}
+
+.hamburger::before {
+  position: absolute;
+  top: -7px;
+}
+
+.hamburger-wrap.toggle .hamburger {
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: rotate .2s ease;
+  transition: rotate .2s ease;
+}
+
+.hamburger-wrap.toggle .hamburger::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hamburger-wrap.toggle .hamburger::after {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.hamburger-wrap.toggle .hamburger,
+.hamburger-wrap.toggle .hamburger::after,
+.hamburger-wrap.toggle .hamburger::before {
+  -webkit-transition: background .2s ease, top .2s ease, -webkit-transform .3s ease .2s;
+  transition: background .2s ease, top .2s ease, -webkit-transform .3s ease .2s;
+  transition: background .2s ease, top .2s ease, transform .3s ease .2s;
+  transition: background .2s ease, top .2s ease, transform .3s ease .2s, -webkit-transform .3s ease .2s;
+}
+
+.main-nav {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  position: absolute;
+  top: 0;
+  padding-top: 7vh;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 0;
+  background: #fff;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  z-index: -1;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.main-nav li {
+  height: calc(100% / 6);
+}
+
+.main-nav li a {
+  color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.main-nav li a:hover, .main-nav li a:active {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-nav:hover a, .main-nav:active a {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.main-nav.toggle {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+/*# sourceMappingURL=style.css.map */

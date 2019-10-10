@@ -1,0 +1,140 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: lightcoral;
+    z-index: -2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 7vh;
+    padding: 0 10px;
+    z-index: 2;
+}
+
+.logo i {
+    font-size: 1.5em;
+}
+
+.bgr-white {
+    background: #fff;
+}
+
+.hamburger-wrap {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.hamburger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: rgba($color: #000000, $alpha: 0.7);
+    transition: transform .2s ease,
+                top .3s ease .2s,
+                background .3s ease .2s;
+}
+
+
+
+.hamburger::after {
+    position: absolute;
+    top: 7px;
+}
+
+.hamburger::before {
+    position: absolute;
+    top: -7px;
+}
+
+.hamburger-wrap.toggle {
+    .hamburger {
+        background: rgba($color: #000000, $alpha: 0.0);
+        transition: rotate .2s ease;
+    }
+
+    .hamburger::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .hamburger::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    .hamburger,
+    .hamburger::after,
+    .hamburger::before {
+        transition: background .2s ease,
+                    top .2s ease,
+                    transform .3s ease .2s;
+    
+    }
+}
+
+
+.main-nav {
+    transition: all .5s ease;
+    position: absolute;
+    top: 0;
+    padding-top: 7vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    background: #fff;
+    transform-origin: top center;
+    z-index: -1;
+    transform: scaleY(0);
+
+    li {
+        height: calc(100% / 6);
+
+        a {
+            color: rgba($color: #000000, $alpha: 0.3);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            transition: color .3s ease;
+        }
+
+        a:hover, a:active {
+            text-decoration: none;
+            color: rgba($color: #000000, $alpha: 0.3);
+        }
+    }
+
+}
+
+.main-nav:hover a, .main-nav:active a {
+    color: rgba($color: #000000, $alpha: 0.1);
+}
+
+.main-nav.toggle {
+    transform: scaleY(1);
+}
+
