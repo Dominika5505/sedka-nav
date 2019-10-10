@@ -6,7 +6,6 @@
 }
 
 body {
-  overflow: hidden;
   background: lightcoral;
   z-index: -2;
 }
