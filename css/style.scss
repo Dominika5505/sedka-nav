@@ -5,9 +5,19 @@
 }
 
 body {
-    // overflow: hidden;
-    background: lightcoral;
+    background: #fff;
     z-index: -2;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+a:hover {
+    text-decoration: none;
+    color: initial;
 }
 
 nav {
@@ -18,6 +28,7 @@ nav {
     height: 7vh;
     padding: 0 10px;
     z-index: 2;
+    width: 100%;
 }
 
 .logo i {
@@ -138,3 +149,99 @@ nav {
     transform: scaleY(1);
 }
 
+.full-height {
+    height: 100vh;
+    width: 100%;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-banner {
+    background-image: url('../resources/adventure-blur-close-up-346885.jpg');
+    margin-top: -7vh;
+}
+
+.second-banner {
+    background-image: url('../resources/adventure-casual-cheerful-541518.jpg');
+}
+
+.main-gallery-banner {
+    background-image: url('../resources/activity-adventure-blur-297642.jpg');
+    background-blend-mode: overlay;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+
+    .show-more-gallery {
+        color: rgba(255, 255, 255, .5);
+        border: 1px solid rgba(255, 255, 255, .4);
+        padding: 10px 20px;
+        transition: all .3s ease-in-out;
+    }
+
+    .show-more-gallery:hover {
+       color: #fff;
+       border: 1px solid #fff;
+       text-decoration: none; 
+    }
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.section-heading {
+    font-weight: 400;
+    position: relative;
+    text-align: left;
+}
+
+.section-heading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    background: #000;
+}
+
+.section-heading-gallery {
+    color: #fff;
+}
+
+.section-heading-gallery::before {
+    background: #fff;
+}
+
+.card-text {
+    color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.custom-btn {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+    font-size: .8em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(212, 181, 123, 0.7);
+    padding: 10px 10px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+.custom-btn:hover, .custom-btn:active {
+    text-decoration: none;
+    color: sandybrown;
+}
+
+.card {
+    border-radius: 0;
+    border: none;
+    padding: 0;
+}
