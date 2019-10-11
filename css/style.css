@@ -186,7 +186,6 @@ nav {
 }
 
 .parallax {
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -203,7 +202,6 @@ nav {
 
 .main-gallery-banner {
   background-image: url("../resources/activity-adventure-blur-297642.jpg");
-  background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
