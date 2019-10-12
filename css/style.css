@@ -211,23 +211,13 @@ nav {
   padding: 10px 20px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  z-index: 5;
 }
 
 .main-gallery-banner .show-more-gallery:hover {
   color: #fff;
   border: 1px solid #fff;
   text-decoration: none;
-}
-
-.main-gallery-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 0;
 }
 
 .card-title {
