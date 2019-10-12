@@ -203,8 +203,6 @@ nav {
 
 .main-gallery-banner {
   position: relative;
-  background: url("../resources/activity-adventure-blur-297642-mobile.jpg") no-repeat;
-  background-size: cover;
 }
 
 .main-gallery-banner .show-more-gallery {
@@ -220,6 +218,17 @@ nav {
   color: #fff;
   border: 1px solid #fff;
   text-decoration: none;
+}
+
+.main-gallery-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
 }
 
 .card-title {
@@ -300,5 +309,45 @@ nav {
 
 .main-gallery a:hover::before, .main-gallery a:active::before {
   opacity: 1;
+}
+
+@media only screen and (min-width: 992px) {
+  .hamburger-wrap {
+    display: none;
+  }
+  .main-nav {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: block;
+    background: none;
+    -webkit-transform-origin: inherit;
+            transform-origin: inherit;
+    z-index: 3;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  .main-nav li {
+    display: inline-block;
+  }
+  .main-nav li a {
+    color: rgba(0, 0, 0, 0.3);
+    display: block;
+    font-size: .7em;
+    margin-left: 15px;
+  }
+  .main-nav:hover a, .main-nav:active a {
+    color: rgba(0, 0, 0, 0.1);
+  }
+  .show-more-wrap {
+    height: 10%;
+  }
+  .main-gallery-row {
+    height: 90%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
