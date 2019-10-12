@@ -15,3 +15,4 @@ if(element.scrollHeight > element.clientHeight) {
   // No overflow detected; prevent scroll bar
   element.style.overflow = 'hidden';
 }
+

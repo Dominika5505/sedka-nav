@@ -188,16 +188,16 @@ nav {
 .parallax {
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: cover;
 }
 
 .main-banner {
-  background-image: url("../resources/adventure-blur-close-up-346885-mobile.jpg");
+  background-image: url("../resources/adventure-blur-close-up-346885.jpg");
   margin-top: -7vh;
 }
 
 .second-banner {
-  background-image: url("../resources/adventure-casual-cheerful-541518-mobile.jpg");
+  background-image: url("../resources/adventure-casual-cheerful-541518.jpg");
 }
 
 .main-gallery-banner {
@@ -310,5 +310,11 @@ nav {
 
 .main-gallery a:hover::before, .main-gallery a:active::before {
   opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .parallax {
+    background-attachment: fixed;
+  }
 }
 /*# sourceMappingURL=style.css.map */
