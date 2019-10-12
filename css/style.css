@@ -203,6 +203,8 @@ nav {
 
 .main-gallery-banner {
   position: relative;
+  background: url("../resources/activity-adventure-blur-297642-mobile.jpg") no-repeat;
+  background-size: cover;
 }
 
 .main-gallery-banner .show-more-gallery {
