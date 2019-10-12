@@ -189,6 +189,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .main-banner {
@@ -203,6 +204,8 @@ nav {
 .main-gallery-banner {
   background-image: url("../resources/activity-adventure-blur-297642.jpg");
   background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 0;
 }
 
 .main-gallery-banner .show-more-gallery {
@@ -217,6 +220,17 @@ nav {
   color: #fff;
   border: 1px solid #fff;
   text-decoration: none;
+}
+
+.main-gallery-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -2;
 }
 
 .card-title {
@@ -275,5 +289,27 @@ nav {
   border-radius: 0;
   border: none;
   padding: 0;
+}
+
+.main-gallery a {
+  position: relative;
+  display: block;
+}
+
+.main-gallery a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(122, 105, 72, 0.5);
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.main-gallery a:hover::before, .main-gallery a:active::before {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
