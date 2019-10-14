@@ -5,321 +5,335 @@
 }
 
 body {
-    background: #fff;
-    z-index: -2;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: initial;
-}
-
-a:hover {
-    text-decoration: none;
-    color: initial;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    height: 7vh;
-    padding: 0 10px;
-    z-index: 2;
-    width: 100%;
-    background-color: rgba($color: #fff, $alpha: 0.5);
-}
-
-.logo i {
-    font-size: 1.5em;
-}
-
-.bgr-white {
-    background: #fff;
-}
-
-.hamburger-wrap {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 5px;
-}
-
-.hamburger {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hamburger, .hamburger::before, .hamburger::after {
-    content: '';
-    width: 25px;
-    height: 2px;
-    background: rgba($color: #000000, $alpha: 0.7);
-    transition: transform .2s ease,
-                top .3s ease .2s,
-                background .3s ease .2s;
-}
-
-
-
-.hamburger::after {
-    position: absolute;
-    top: 7px;
-}
-
-.hamburger::before {
-    position: absolute;
-    top: -7px;
-}
-
-.hamburger-wrap.toggle {
-    .hamburger {
-        background: rgba($color: #000000, $alpha: 0.0);
-        transition: rotate .2s ease;
-    }
-
-    .hamburger::before {
-        top: 0;
-        transform: rotate(45deg);
-    }
-
-    .hamburger::after {
-        top: 0;
-        transform: rotate(135deg);
-    }
-
-    .hamburger,
-    .hamburger::after,
-    .hamburger::before {
-        transition: background .2s ease,
-                    top .2s ease,
-                    transform .3s ease .2s;
-    
-    }
-}
-
-
-.main-nav {
-    transition: all .5s ease;
     position: absolute;
     top: 0;
-    padding-top: 7vh;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     left: 0;
-    background: #fff;
-    transform-origin: top center;
-    z-index: -1;
-    transform: scaleY(0);
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1;
+}
 
-    li {
-        height: calc(100% / 6);
-
-        a {
-            color: rgba($color: #000000, $alpha: 0.3);
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            text-align: center;
-            text-transform: uppercase;
-            transition: color .3s ease;
-        }
-
-        a:hover, a:active {
-            text-decoration: none;
-            color: rgba($color: #000000, $alpha: 0.3);
-        }
-    }
+.con-mg {
+    padding: 15em 5em;
 
 }
 
-.main-nav:hover a, .main-nav:active a {
-    color: rgba($color: #000000, $alpha: 0.1);
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.main-nav.toggle {
-    transform: scaleY(1);
+.nav {
+    list-style: none;
 }
 
-.full-height {
+.nav:hover a {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.nav li a {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.582);
+    text-decoration: none;
+    transition: color .2s ease;
+
+}
+
+.nav li a:hover {
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.banner-con {
+    position: relative;
+    background-image: url("../resources/adventure-blur-close-up-346885.jpg");
+
+    /* Set a specific height */
     height: 100vh;
-    width: 100%;
+  
+    z-index: -1;
+}
+
+.banner-con::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    content: '';
 }
 
 .parallax {
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.quote-con {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quote {
+    font-family: 'Allura', cursive;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.quote-author {
+    text-align: right;
+    width: 30%;
+}
+
+.con-headline {
+    padding: 0 0 0 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 300;
+    position: relative;
+}
+
+.site-banner {
+    background-image: url('../resources/adventure-casual-cheerful-541518.jpg');
+    height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.stories-con {
+    padding: 5em;
+}
+
+.story-card {
+    text-align: center;
+    box-shadow: 0px 0px 13px -11px rgba(0,0,0,0.5);
+}
+
+.story-img {
+    background-image: url('../resources/cosmic-timetraveler-ik2BN5dI6tE-unsplash.jpg');
+    height: 200px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
-.main-banner {
-    background-image: url('../resources/adventure-blur-close-up-346885.jpg');
-    margin-top: -7vh;
-}
-
-.second-banner {
-    background-image: url('../resources/adventure-casual-cheerful-541518.jpg');
-}
-
-.main-gallery-banner {
+.story-description {
+    padding: 20px;
     position: relative;
-
-
-    .show-more-gallery {
-        color: rgba(255, 255, 255, .5);
-        border: 1px solid rgba(255, 255, 255, .4);
-        padding: 10px 20px;
-        transition: all .3s ease-in-out;
-        z-index: 5;
-    }
-
-    .show-more-gallery:hover {
-       color: #fff;
-       border: 1px solid #fff;
-       text-decoration: none; 
-    }
+    height: 200px;
 }
 
-.main-gallery-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba($color: #000000, $alpha: 0.3);
-    z-index: 0;
-}
-
-.card-title {
-    text-transform: uppercase;
+.story-description h2 {
+    font-family: 'Allura', cursive;
     font-weight: 200;
+    font-size: 2em;
+    padding: 20px;
 }
 
-.section-heading {
-    font-weight: 400;
-    position: relative;
+.story-description p {
+    color: rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
     text-align: left;
+    font-size: 0.7em;
 }
 
-.section-heading::before {
-    content: '';
+.story-button {
+    
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 1px;
-    background: #000;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
 }
 
-.section-heading-gallery {
-    color: #fff;
+.story-button:hover {
+    color: rgba(0,0,0,0.3);;
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
-.section-heading-gallery::before {
-    background: #fff;
-}
-
-.card-text {
-    color: rgba($color: #000000, $alpha: 0.5);
-}
-
-.custom-btn {
+.btn {
     width: 150px;
-    margin: 0 auto;
     display: block;
     font-size: .8em;
     text-decoration: none;
     text-transform: uppercase;
-    color: rgba(212, 181, 123, 0.7);
+    color: rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.2);
     padding: 10px 10px;
     text-align: center;
     transition: all .3s ease-in-out;
 }
 
-.custom-btn:hover, .custom-btn:active {
-    text-decoration: none;
-    color: sandybrown;
+.show-more-story {
+    margin: 50px auto;
+    color: rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.1);
+    width: 10em;
 }
 
-.card {
-    border-radius: 0;
-    border: none;
-    padding: 0;
+.show-more-story:hover {
+    color: rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.2);
 }
 
-.main-gallery a {
+.gallery-con {
+    background-image: url('../resources/activity-adventure-blur-297642.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     position: relative;
-    display: block;
+    z-index: 1;
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
 }
 
-.main-gallery a::before {
+.gallery-con::before {
     content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.show-more-gallery {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, .5);
+    border: 1px solid rgba(255, 255, 255, .4);
+    z-index: 3;
+}
+
+.show-more-gallery:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.gallery {
+    width: 100%;
+    height: 80%;
+    align-content: center;
+    z-index: 3;
+}
+
+.gallery-photo-con {
+    background-image: url('../resources/rolands-varsbergs-miKmVyq3qhE-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25em;
+    flex-grow: 1;
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery-photo-con:hover .overlay {
+    opacity: 1;
+}
+
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(122, 105, 72, 0.5);
+    background: rgba(255, 255, 255, .5);
+    transition: opacity .5s ease;
     opacity: 0;
-    transition: all .3s ease;
 }
 
-.main-gallery a:hover::before, .main-gallery a:active::before {
-    opacity: 1;
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 1.5em;
+    left: 2em;
+    height: 0;
+    width: 1px;
+    background: #fff;
+    transition: height .5s ease;
+    transition-delay: .2s;
 }
 
+.overlay::after {
+    content: '';
+    position: absolute;
+    top: 2em;
+    left: 1.5em;
+    width: 0%;
+    height: 1.5px;
+    background: #fff;
+    transition: width .5s ease;
+    transition-delay: .2s;
 
-@media only screen and (min-width: 992px) {
-    .hamburger-wrap {
-        display: none;
-    }
-    
+}
 
-    
-    .main-nav {
-        transition: all .5s ease;
-        position: relative;
-        width: auto;
-        height: auto;
-        padding: 0;
-        margin: 0;
-        display: block;
-        background: none;
-        transform-origin: inherit;
-        z-index: 3;
-        transform: scaleY(1);
-    
-        li {
-            display: inline-block;
-    
-            a {
-                color: rgba($color: #000000, $alpha: 0.3);
-                display: block;
-                font-size: .7em;
-                margin-left: 15px;
-            }
-        }
-    }
-    
-    .main-nav:hover a, .main-nav:active a {
-        color: rgba($color: #000000, $alpha: 0.1);
-    }
+.gallery-photo-con:hover .overlay::before {
+    height: 70%;
+}
 
-    .show-more-wrap{
-        height: 10%;
-    }
+.gallery-photo-con:hover .overlay::after {
+    width: 70%;
+}
 
-    .main-gallery-row {
-        height: 90%;
-    }
+.gallery-headline {
+    color: #fff;
+    padding: 0 0 0 10px;
+    z-index: 3;
+}
+
+.con-headline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background: #000;
+}
+
+.gallery-headline::before {
+    
+    background: #fff;
+}
+
+footer {
+    padding: 50px 0;
+}
+
+footer p {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    color: rgba(204, 204, 204, 0.356);
+    font-size: 1rem;
 }
