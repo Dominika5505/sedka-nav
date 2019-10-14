@@ -2,87 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="Why Not, bucket list, travel, block, stories, photography, photos, gallery, girls, Alexandra, Simona">
-    <meta name="author" content="Dominika Sedileková">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Why Not</title>
+    <title>Document</title>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/871671bc02.js" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Allura|Montserrat:300,400,500,600&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Allura|Montserrat:300,400,500,600&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <div class="logo-con"><i class="fas fa-moon"></i></div>
-            <ul class="nav">
-                <li class="nav-item"><a href="#">Home</a></li>
-                <li class="nav-item"><a href="#">Stories</a></li>
-                <li class="nav-item"><a href="#">Gallery</a></li>
-                <li class="nav-item"><a href="#">Bucket List</a></li>
-                <li class="nav-item"><a href="#">About Us</a></li>
-                <li class="nav-item"><a href="#">Follow Us</a></li>
-            </ul>
-        </nav>
-        <div class="banner-con parallax">
+    <nav>
+        <div class="logo">
+                <i class="fas fa-spa"></i>
         </div>
-        <div class="quote-con con-mg">
-            <p class="quote">Attached to nothing. Connected to everything</p>
-            <p class="quote-author">- unknown</p>
+        <div class="hamburger-wrap">
+            <div class="hamburger mr-3"></div>
         </div>
-        <div class="site-banner parallax">
+        <ul class="main-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Stories</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Bucket List</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Follow Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="full-height parallax-window" data-parallax="scroll" data-image-src="resources/adventure-blur-close-up-346885.jpg"></div>
+
+    <div class="container-fluid bg-white" style="height: 70vh;">
+        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+            <p class="text-uppercase text-center lead">Attached to Nothing, Connected to Everything</p>
+            <p class="text-center blockquote-footer font-italic text-black-50">unknown</p>
         </div>
-        <div class="stories-con">
-            <div class="con-headline"><p>Recent Stories</p></div>
-                <div class="grid">
-                    <div class="story-card">
-                        <div class="story-img"></div>
-                        <div class="story-description">
-                            <p>28.1.2019 - Simona</p>
-                            <h2>Nadpis storky, aj dlhší. môže byť.</h2>
-                            <a href="#" class="story-button btn">Show Story</a>
-                        </div>
-                    </div>
-                    <div class="story-card">
-                        <div class="story-img"></div>
-                        <div class="story-description">
-                            <p>28.1.2019 - Alexandra</p>
-                            <h2>Nadpis storky, ešte dlhší text, lebo som kretívna</h2>
-                            <a href="#" class="story-button btn">Show Story</a>
-                        </div>
-                    </div>
-                    <div class="story-card">
-                        <div class="story-img"></div>
-                        <div class="story-description">
-                            <p>28.1.2019 - Alexandra</p>
-                            <h2>Nadpis storky, kratší</h2>
-                            <a href="#" class="story-button btn">Show Story</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="show-more"><a href="#" class="show-more-story btn">Show All</a></div>
-            </div>
-        </div>
-        <div class="gallery-con parallax">
-            <div class="con-headline gallery-headline"><p>Recent Photos</p></div>
-            <div class="gallery flex">
-                <div class="gallery-photo-con">
-                    <div class="overlay"></div>
-                </div>
-                <div class="gallery-photo-con">
-                        <div class="overlay"></div>
-                </div>
-                <div class="gallery-photo-con">
-                        <div class="overlay"></div>
-                </div>
-            </div>
-            <div class="show-more"><a href="#" class="show-more-gallery btn">Show All</a></div>
-        </div>
-        <footer><p>&copy; Dominika Sedileková; All Rights Reserved</p></footer>
     </div>
+
+    <div class="d-flex justify-content-center align-items-center full-height parallax-window" data-parallax="scroll" data-image-src="resources/adventure-casual-cheerful-541518.jpg"></div>
+
+
+    <div class="container-fluid text-center bg-white p-3 p-lg-5 mt-5 mb-5">
+
+        <p class="section-heading text-uppercase lead col-12">Recent Stories</p>
+        <div class="card-deck flex-column flex-md-row">
+
+                <a href ="#" class="card shadow-sm mb-4 mb-md-0">
+                    <img class="card-img-top" src="https://source.unsplash.com/collection/190727/700x600" alt="Card image cap">
+                    <p class="text-left author mb-0">Datum, author</p>
+                    <div class="p-5 p-md-1 p-lg-3 card-body d-flex justify-content-center align-items-center">
+                        <h5 class="card-title">Story title</h5>
+                    </div>
+                </a>
+         
+                <a href ="#" class="card shadow-sm mb-4 mb-md-0">
+                    <img class="card-img-top" src="https://source.unsplash.com/collection/190727/700x600" alt="Card image cap">
+                    <p class="text-left author mb-0"> author</p>
+                    <div class="p-5 p-md-1 p-lg-3 card-body d-flex justify-content-center align-items-center">
+                        <h5 class="card-title">Story title longer title</h5>    
+                    </div>
+                </a>
+           
+                <a href ="#" class="card shadow-sm">
+                    <img class="card-img-top" src="https://source.unsplash.com/collection/190727/700x600" alt="Card image cap">
+                    <p class="text-left author mb-0">Datum, author</p>
+                    <div class="p-5 p-md-1 p-lg-3 card-body d-flex justify-content-center align-items-center">
+                        <h5 class="card-title">The longest title in history of the frickin titles</h5>
+                    </div>
+                </a>
+           
+
+        </div>
+    </div>
+
+    <div class="container-fluid main-gallery-banner parallax-window p-5" data-parallax="scroll" data-image-src="resources/activity-adventure-blur-297642.jpg">
+        <div class="main-gallery-row row">
+            <div class="d-flex align-items-center col-md-1 mr-4">
+                <p class="section-heading text-uppercase pl-3 pl-md-2 lead mr-md-2 section-heading-gallery">Recent Photos</p>
+            </div>
+            <div class="main-gallery mb-4 m-md-0 col-md d-flex align-items-center">
+                <a href="#" class="h-md-100"><img src="https://source.unsplash.com/collection/190727/700x700" alt="" class="card-img-top h-100 main-gallery-photo"></a>
+            </div>
+            <div class="main-gallery mb-4 m-md-0 col-md d-flex align-items-center">
+                <a href="#" class="h-md-100"><img src="https://source.unsplash.com/collection/190727/700x700" alt="" class="card-img-top main-gallery-photo"></a>
+            </div>
+            <div class="main-gallery col-md d-flex align-items-center">
+                <a href="#" class="h-md-100"><img src="https://source.unsplash.com/collection/190727/700x700" alt="" class="card-img-top main-gallery-photo"></a>
+            </div>
+        </div>
+        <div class="row show-more-wrap d-flex justify-content-center align-items-center">
+            <a href="#" class="show-more-gallery mt-5">Show More</a>
+        </div>
+    </div>
+    <footer class="d-flex justify-content-center align-items-center p-4">
+        <p class="m-0 small text-black-50">&copy; Dominika Sedileková, All Rights Reserved</p>
+    </footer>
+
+
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- Parallax -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/parallax.min.js"></script>
+
+<!-- JavaScript -->
+<script src="js/nav.js"></script>
 </body>
 </html>
