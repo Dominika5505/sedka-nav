@@ -161,10 +161,16 @@ nav {
     background-size: cover;
 }
 
-// .main-banner {
-//     background-image: url('../resources/adventure-blur-close-up-346885.jpg');
-//     margin-top: -7vh;
-// }
+.main-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main-banner .image {
+    object-fit: contain;
+}
 
 // .second-banner {
 //     background-image: url('../resources/adventure-casual-cheerful-541518.jpg');
