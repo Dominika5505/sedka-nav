@@ -33,12 +33,7 @@ function myFunction(x, varName, url) {
     } else {
       varName.attribute('data-image-src', url);
     }
-    
-    if (varName.classList.contains('full-height')) {
-      return;
-    } else {
       varName.classList.add('full-height');
-    }
     varName.style.background = 'none';
   } else {
     if(varName.classList.contains('full-height')) {

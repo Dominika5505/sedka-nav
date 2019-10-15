@@ -118,10 +118,10 @@ nav {
     transform-origin: top center;
     z-index: -1;
     transform: scaleY(0);
-
+    
     li {
         height: calc(100% / 6);
-
+        
         a {
             color: rgba($color: #000000, $alpha: 0.3);
             height: 100%;
@@ -133,13 +133,13 @@ nav {
             text-transform: uppercase;
             transition: color .3s ease;
         }
-
+        
         a:hover, a:active {
             text-decoration: none;
             color: rgba($color: #000000, $alpha: 0.3);
         }
     }
-
+    
 }
 
 .main-nav:hover a, .main-nav:active a {
@@ -161,45 +161,14 @@ nav {
     background-size: cover;
 }
 
-.main-banner {
-    background-image: url('../resources/adventure-blur-close-up-346885.jpg');
-    margin-top: -7vh;
-}
+// .main-banner {
+//     background-image: url('../resources/adventure-blur-close-up-346885.jpg');
+//     margin-top: -7vh;
+// }
 
-.second-banner {
-    background-image: url('../resources/adventure-casual-cheerful-541518.jpg');
-}
-
-.main-gallery-banner {
-    position: relative;
-
-
-    .show-more-gallery {
-        color: rgba(255, 255, 255, .5);
-        border: 1px solid rgba(255, 255, 255, .4);
-        padding: 10px 20px;
-        transition: all .3s ease-in-out;
-        z-index: 5;
-    }
-
-    .show-more-gallery:hover {
-       color: #fff;
-       border: 1px solid #fff;
-       text-decoration: none; 
-    }
-}
-
-.main-gallery-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba($color: #000000, $alpha: 0.3);
-    z-index: 0;
-}
-
+// .second-banner {
+//     background-image: url('../resources/adventure-casual-cheerful-541518.jpg');
+// }
 
 .section-heading {
     font-weight: 400;
@@ -245,6 +214,51 @@ nav {
     padding: 10px 0 0 10px;
     color: rgba($color: #000000, $alpha: 0.3);
 }
+
+.show-more-stories {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    padding: 10px 20px;
+    color: rgba($color: #000000, $alpha: 0.2);
+    transition: all .2s ease-in-out;
+}
+
+.show-more-stories:hover, .show-more-stories:active {
+    color: rgba($color: #000000, $alpha: 0.4);
+    border: 1px solid rgba($color: #000000, $alpha: 0.4);
+}
+
+
+.main-gallery-banner {
+    position: relative;
+    
+    
+    .show-more-gallery {
+        color: rgba(255, 255, 255, .5);
+        border: 1px solid rgba(255, 255, 255, .4);
+        padding: 10px 20px;
+        transition: all .2s ease-in-out;
+        z-index: 5;
+    }
+
+    .show-more-gallery:hover {
+       color: #fff;
+       border: 1px solid #fff;
+       text-decoration: none; 
+    }
+}
+
+.main-gallery-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    z-index: 0;
+}
+
+
 
 // .custom-btn {
     //     width: 150px;
@@ -296,7 +310,7 @@ nav {
         font-size: .7em;
     }
 
-    .show-more-gallery {
+    .show-more-gallery, .show-more-stories {
         font-size: .7em;
         padding: 5px 10px !important; 
     }
@@ -342,7 +356,7 @@ nav {
         font-size: 1em;
     }
 
-    .show-more-gallery {
+    .show-more-gallery, .show-more-stories {
         font-size: 1em;
         padding: 10px 20px !important; 
     }
